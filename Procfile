@@ -1,1 +1,1 @@
-web: gunicorn streamlit-apta.wsgi
+web: gunicorn SingleWebPage.wsgi

@@ -1,100 +1,100 @@
-2022-06-07T03:51:33.500447+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
-2022-06-07T03:51:33.500447+00:00 app[web.1]: mod = importlib.import_module(module)
-2022-06-07T03:51:33.500448+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/importlib/__init__.py", line 126, in import_module
-2022-06-07T03:51:33.500448+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
-2022-06-07T03:51:33.500448+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-2022-06-07T03:51:33.500448+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-2022-06-07T03:51:33.500448+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
-2022-06-07T03:51:33.500449+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-2022-06-07T03:51:33.500449+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-2022-06-07T03:51:33.500449+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-2022-06-07T03:51:33.500449+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-2022-06-07T03:51:33.500449+00:00 app[web.1]: ModuleNotFoundError: No module named 'apta-streamlit'
-2022-06-07T03:51:33.500514+00:00 app[web.1]: [2022-06-07 03:51:33 +0000] [9] [INFO] Worker exiting (pid: 9)
-2022-06-07T03:51:33.532492+00:00 app[web.1]: [2022-06-07 03:51:33 +0000] [4] [INFO] Shutting down: Master
-2022-06-07T03:51:33.532519+00:00 app[web.1]: [2022-06-07 03:51:33 +0000] [4] [INFO] Reason: Worker failed to boot.
-2022-06-07T03:51:33.671145+00:00 heroku[web.1]: Process exited with status 3
-2022-06-07T03:51:33.712691+00:00 heroku[web.1]: State changed from starting to crashed
-2022-06-07T03:51:45.554426+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=streamlit-apta.herokuapp.com request_id=155dd860-62e9-44f4-87e4-26a6a1cae147 fwd="101.128.118.197" dyno= connect= service= status=503 bytes= protocol=https
-2022-06-07T03:51:46.379880+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=streamlit-apta.herokuapp.com request_id=37a6a203-99bd-4b0f-bde8-93cb52a23e4f fwd="101.128.118.197" dyno= connect= service= status=503 bytes= protocol=https
-2022-06-07T04:07:13.519836+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=streamlit-apta.herokuapp.com request_id=9832e182-b4d0-4fd6-a740-6b2358830c4c fwd="101.128.118.197" dyno= connect= service= status=503 bytes= protocol=https
-2022-06-07T04:08:27.000000+00:00 app[api]: Build started by user aziz@apta.id
-2022-06-07T04:08:56.035091+00:00 app[api]: Deploy cd62f2fe by user aziz@apta.id
-2022-06-07T04:08:56.035091+00:00 app[api]: Release v7 created by user aziz@apta.id
-2022-06-07T04:08:56.296403+00:00 heroku[web.1]: State changed from crashed to starting
-2022-06-07T04:09:00.975733+00:00 heroku[web.1]: Starting process with command `gunicorn streamlit-apta.wsgi`
-2022-06-07T04:09:01.995133+00:00 app[web.1]: [2022-06-07 04:09:01 +0000] [4] [INFO] Starting gunicorn 20.1.0
-2022-06-07T04:09:01.995453+00:00 app[web.1]: [2022-06-07 04:09:01 +0000] [4] [INFO] Listening at: http://0.0.0.0:20981 (4)
-2022-06-07T04:09:01.995495+00:00 app[web.1]: [2022-06-07 04:09:01 +0000] [4] [INFO] Using worker: sync
-2022-06-07T04:09:01.999100+00:00 app[web.1]: [2022-06-07 04:09:01 +0000] [9] [INFO] Booting worker with pid: 9
-2022-06-07T04:09:02.002241+00:00 app[web.1]: [2022-06-07 04:09:02 +0000] [9] [ERROR] Exception in worker process
-2022-06-07T04:09:02.002241+00:00 app[web.1]: Traceback (most recent call last):
-2022-06-07T04:09:02.002248+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
-2022-06-07T04:09:02.002248+00:00 app[web.1]: worker.init_process()
-2022-06-07T04:09:02.002249+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
-2022-06-07T04:09:02.002249+00:00 app[web.1]: self.load_wsgi()
-2022-06-07T04:09:02.002249+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
-2022-06-07T04:09:02.002250+00:00 app[web.1]: self.wsgi = self.app.wsgi()
-2022-06-07T04:09:02.002250+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
-2022-06-07T04:09:02.002250+00:00 app[web.1]: self.callable = self.load()
-2022-06-07T04:09:02.002250+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
-2022-06-07T04:09:02.002251+00:00 app[web.1]: return self.load_wsgiapp()
-2022-06-07T04:09:02.002251+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
-2022-06-07T04:09:02.002251+00:00 app[web.1]: return util.import_app(self.app_uri)
-2022-06-07T04:09:02.002251+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
-2022-06-07T04:09:02.002251+00:00 app[web.1]: mod = importlib.import_module(module)
-2022-06-07T04:09:02.002252+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/importlib/__init__.py", line 126, in import_module
-2022-06-07T04:09:02.002252+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
-2022-06-07T04:09:02.002253+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-2022-06-07T04:09:02.002253+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-2022-06-07T04:09:02.002253+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
-2022-06-07T04:09:02.002253+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-2022-06-07T04:09:02.002253+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-2022-06-07T04:09:02.002254+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-2022-06-07T04:09:02.002254+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-2022-06-07T04:09:02.002254+00:00 app[web.1]: ModuleNotFoundError: No module named 'streamlit-apta'
-2022-06-07T04:09:02.002308+00:00 app[web.1]: [2022-06-07 04:09:02 +0000] [9] [INFO] Worker exiting (pid: 9)
-2022-06-07T04:09:02.034929+00:00 app[web.1]: [2022-06-07 04:09:02 +0000] [4] [INFO] Shutting down: Master
-2022-06-07T04:09:02.034958+00:00 app[web.1]: [2022-06-07 04:09:02 +0000] [4] [INFO] Reason: Worker failed to boot.
-2022-06-07T04:09:02.167369+00:00 heroku[web.1]: Process exited with status 3
-2022-06-07T04:09:02.517672+00:00 heroku[web.1]: State changed from starting to crashed
-2022-06-07T04:09:02.521823+00:00 heroku[web.1]: State changed from crashed to starting
-2022-06-07T04:09:06.000000+00:00 app[api]: Build succeeded
-2022-06-07T04:09:07.232637+00:00 heroku[web.1]: Starting process with command `gunicorn streamlit-apta.wsgi`
-2022-06-07T04:09:08.312602+00:00 app[web.1]: [2022-06-07 04:09:08 +0000] [4] [INFO] Starting gunicorn 20.1.0
-2022-06-07T04:09:08.313066+00:00 app[web.1]: [2022-06-07 04:09:08 +0000] [4] [INFO] Listening at: http://0.0.0.0:43028 (4)
-2022-06-07T04:09:08.313127+00:00 app[web.1]: [2022-06-07 04:09:08 +0000] [4] [INFO] Using worker: sync
-2022-06-07T04:09:08.317260+00:00 app[web.1]: [2022-06-07 04:09:08 +0000] [9] [INFO] Booting worker with pid: 9
-2022-06-07T04:09:08.320121+00:00 app[web.1]: [2022-06-07 04:09:08 +0000] [9] [ERROR] Exception in worker process
-2022-06-07T04:09:08.320122+00:00 app[web.1]: Traceback (most recent call last):
-2022-06-07T04:09:08.320122+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
-2022-06-07T04:09:08.320123+00:00 app[web.1]: worker.init_process()
-2022-06-07T04:09:08.320123+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
-2022-06-07T04:09:08.320124+00:00 app[web.1]: self.load_wsgi()
-2022-06-07T04:09:08.320124+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
-2022-06-07T04:09:08.320124+00:00 app[web.1]: self.wsgi = self.app.wsgi()
-2022-06-07T04:09:08.320124+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
-2022-06-07T04:09:08.320125+00:00 app[web.1]: self.callable = self.load()
-2022-06-07T04:09:08.320125+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
-2022-06-07T04:09:08.320125+00:00 app[web.1]: return self.load_wsgiapp()
-2022-06-07T04:09:08.320126+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
-2022-06-07T04:09:08.320126+00:00 app[web.1]: return util.import_app(self.app_uri)
-2022-06-07T04:09:08.320126+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
-2022-06-07T04:09:08.320127+00:00 app[web.1]: mod = importlib.import_module(module)
-2022-06-07T04:09:08.320127+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/importlib/__init__.py", line 126, in import_module
-2022-06-07T04:09:08.320127+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
-2022-06-07T04:09:08.320128+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-2022-06-07T04:09:08.320128+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-2022-06-07T04:09:08.320128+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
-2022-06-07T04:09:08.320129+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-2022-06-07T04:09:08.320129+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-2022-06-07T04:09:08.320129+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-2022-06-07T04:09:08.320130+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
-2022-06-07T04:09:08.320130+00:00 app[web.1]: ModuleNotFoundError: No module named 'streamlit-apta'
-2022-06-07T04:09:08.320189+00:00 app[web.1]: [2022-06-07 04:09:08 +0000] [9] [INFO] Worker exiting (pid: 9)
-2022-06-07T04:09:08.359924+00:00 app[web.1]: [2022-06-07 04:09:08 +0000] [4] [INFO] Shutting down: Master
-2022-06-07T04:09:08.359980+00:00 app[web.1]: [2022-06-07 04:09:08 +0000] [4] [INFO] Reason: Worker failed to boot.
-2022-06-07T04:09:08.561151+00:00 heroku[web.1]: Process exited with status 3
-2022-06-07T04:09:08.630843+00:00 heroku[web.1]: State changed from starting to crashed
-2022-06-07T04:09:10.507796+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=streamlit-apta.herokuapp.com request_id=ea3ca283-9cc2-493d-a1c8-7fc7dda13509 fwd="101.128.118.197" dyno= connect= service= status=503 bytes= protocol=https
-2022-06-07T04:09:39.434084+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=streamlit-apta.herokuapp.com request_id=8e2f28fe-ff50-4b42-b129-180edb11a9ea fwd="101.128.118.197" dyno= connect= service= status=503 bytes= protocol=https
+2022-06-07T04:19:45.128497+00:00 app[web.1]: worker.init_process()
+2022-06-07T04:19:45.128497+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2022-06-07T04:19:45.128498+00:00 app[web.1]: self.load_wsgi()
+2022-06-07T04:19:45.128498+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2022-06-07T04:19:45.128498+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2022-06-07T04:19:45.128499+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2022-06-07T04:19:45.128499+00:00 app[web.1]: self.callable = self.load()
+2022-06-07T04:19:45.128499+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2022-06-07T04:19:45.128500+00:00 app[web.1]: return self.load_wsgiapp()
+2022-06-07T04:19:45.128500+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2022-06-07T04:19:45.128500+00:00 app[web.1]: return util.import_app(self.app_uri)
+2022-06-07T04:19:45.128500+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+2022-06-07T04:19:45.128501+00:00 app[web.1]: mod = importlib.import_module(module)
+2022-06-07T04:19:45.128501+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2022-06-07T04:19:45.128501+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2022-06-07T04:19:45.128502+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2022-06-07T04:19:45.128502+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2022-06-07T04:19:45.128502+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+2022-06-07T04:19:45.128503+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2022-06-07T04:19:45.128503+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2022-06-07T04:19:45.128503+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2022-06-07T04:19:45.128504+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+2022-06-07T04:19:45.128504+00:00 app[web.1]: ModuleNotFoundError: No module named 'streamlit-apta'
+2022-06-07T04:19:45.128548+00:00 app[web.1]: [2022-06-07 04:19:45 +0000] [10] [INFO] Worker exiting (pid: 10)
+2022-06-07T04:19:45.170784+00:00 app[web.1]: Traceback (most recent call last):
+2022-06-07T04:19:45.170793+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 202, in run
+2022-06-07T04:19:45.171010+00:00 app[web.1]: self.manage_workers()
+2022-06-07T04:19:45.171013+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 551, in manage_workers
+2022-06-07T04:19:45.171180+00:00 app[web.1]: self.spawn_workers()
+2022-06-07T04:19:45.171180+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 623, in spawn_workers
+2022-06-07T04:19:45.171324+00:00 app[web.1]: time.sleep(0.1 * random.random())
+2022-06-07T04:19:45.171333+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2022-06-07T04:19:45.171425+00:00 app[web.1]: self.reap_workers()
+2022-06-07T04:19:45.171426+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2022-06-07T04:19:45.171558+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2022-06-07T04:19:45.171610+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2022-06-07T04:19:45.171611+00:00 app[web.1]: 
+2022-06-07T04:19:45.171611+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2022-06-07T04:19:45.171611+00:00 app[web.1]: 
+2022-06-07T04:19:45.171621+00:00 app[web.1]: Traceback (most recent call last):
+2022-06-07T04:19:45.171623+00:00 app[web.1]: File "/app/.heroku/python/bin/gunicorn", line 8, in <module>
+2022-06-07T04:19:45.171713+00:00 app[web.1]: sys.exit(run())
+2022-06-07T04:19:45.171722+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+2022-06-07T04:19:45.171800+00:00 app[web.1]: WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2022-06-07T04:19:45.171809+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/base.py", line 231, in run
+2022-06-07T04:19:45.171904+00:00 app[web.1]: super().run()
+2022-06-07T04:19:45.171913+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+2022-06-07T04:19:45.171986+00:00 app[web.1]: Arbiter(self).run()
+2022-06-07T04:19:45.171994+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 229, in run
+2022-06-07T04:19:45.172084+00:00 app[web.1]: self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2022-06-07T04:19:45.172084+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 342, in halt
+2022-06-07T04:19:45.172198+00:00 app[web.1]: self.stop()
+2022-06-07T04:19:45.172207+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 393, in stop
+2022-06-07T04:19:45.172321+00:00 app[web.1]: time.sleep(0.1)
+2022-06-07T04:19:45.172328+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2022-06-07T04:19:45.172419+00:00 app[web.1]: self.reap_workers()
+2022-06-07T04:19:45.172427+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2022-06-07T04:19:45.172552+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2022-06-07T04:19:45.172599+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2022-06-07T04:19:45.304066+00:00 heroku[web.1]: Process exited with status 1
+2022-06-07T04:19:45.971595+00:00 heroku[web.1]: State changed from starting to crashed
+2022-06-07T04:19:45.974930+00:00 heroku[web.1]: State changed from crashed to starting
+2022-06-07T04:19:49.000000+00:00 app[api]: Build succeeded
+2022-06-07T04:19:50.541419+00:00 heroku[web.1]: Starting process with command `gunicorn streamlit-apta.wsgi`
+2022-06-07T04:19:51.599565+00:00 app[web.1]: [2022-06-07 04:19:51 +0000] [4] [INFO] Starting gunicorn 20.1.0
+2022-06-07T04:19:51.599872+00:00 app[web.1]: [2022-06-07 04:19:51 +0000] [4] [INFO] Listening at: http://0.0.0.0:56438 (4)
+2022-06-07T04:19:51.599896+00:00 app[web.1]: [2022-06-07 04:19:51 +0000] [4] [INFO] Using worker: sync
+2022-06-07T04:19:51.603064+00:00 app[web.1]: [2022-06-07 04:19:51 +0000] [9] [INFO] Booting worker with pid: 9
+2022-06-07T04:19:51.605890+00:00 app[web.1]: [2022-06-07 04:19:51 +0000] [9] [ERROR] Exception in worker process
+2022-06-07T04:19:51.605890+00:00 app[web.1]: Traceback (most recent call last):
+2022-06-07T04:19:51.605891+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+2022-06-07T04:19:51.605891+00:00 app[web.1]: worker.init_process()
+2022-06-07T04:19:51.605891+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2022-06-07T04:19:51.605892+00:00 app[web.1]: self.load_wsgi()
+2022-06-07T04:19:51.605892+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2022-06-07T04:19:51.605892+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2022-06-07T04:19:51.605892+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2022-06-07T04:19:51.605893+00:00 app[web.1]: self.callable = self.load()
+2022-06-07T04:19:51.605893+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2022-06-07T04:19:51.605893+00:00 app[web.1]: return self.load_wsgiapp()
+2022-06-07T04:19:51.605893+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2022-06-07T04:19:51.605894+00:00 app[web.1]: return util.import_app(self.app_uri)
+2022-06-07T04:19:51.605894+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+2022-06-07T04:19:51.605894+00:00 app[web.1]: mod = importlib.import_module(module)
+2022-06-07T04:19:51.605894+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2022-06-07T04:19:51.605895+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2022-06-07T04:19:51.605895+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2022-06-07T04:19:51.605895+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2022-06-07T04:19:51.605895+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+2022-06-07T04:19:51.605895+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2022-06-07T04:19:51.605896+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2022-06-07T04:19:51.605896+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2022-06-07T04:19:51.605896+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+2022-06-07T04:19:51.605896+00:00 app[web.1]: ModuleNotFoundError: No module named 'streamlit-apta'
+2022-06-07T04:19:51.605953+00:00 app[web.1]: [2022-06-07 04:19:51 +0000] [9] [INFO] Worker exiting (pid: 9)
+2022-06-07T04:19:51.631929+00:00 app[web.1]: [2022-06-07 04:19:51 +0000] [4] [INFO] Shutting down: Master
+2022-06-07T04:19:51.631964+00:00 app[web.1]: [2022-06-07 04:19:51 +0000] [4] [INFO] Reason: Worker failed to boot.
+2022-06-07T04:19:51.753305+00:00 heroku[web.1]: Process exited with status 3
+2022-06-07T04:19:51.848241+00:00 heroku[web.1]: State changed from starting to crashed
+2022-06-07T04:20:46.843793+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=apta-streamlit.herokuapp.com request_id=7c289494-af31-48e2-9052-aeea50db6f1a fwd="101.128.118.197" dyno= connect= service= status=503 bytes= protocol=https
