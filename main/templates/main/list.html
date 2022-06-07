@@ -8,10 +8,9 @@
 	<form method="post" action="#">
 		{% csrf_token %}
 		{% for item in ls.item_set.all %}
-        <div class="list-group">
-            <p  class="list-group-item">{{item.text}} 
-                <a href="{{item.link}}" target="_blank" rel="noopener noreferrer" >click here</a>
-            </p>
+        <div class="list-group"> 
+			<a class="list-group-item" href="{{item.link}}" target="_blank" rel="noopener noreferrer" >{{item.text}}</a>
+            
            
           </div>
 		{% endfor %}
