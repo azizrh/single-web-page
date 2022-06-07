@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5lk$0*jz%%ukx8)*eh%(=7m0on3da7jap++72ctjxea#o=od*7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://apta-streamlit.herokuapp.com/']
+ALLOWED_HOSTS = ['apta-streamlit.herokuapp.com']
 
 
 # Application definition
